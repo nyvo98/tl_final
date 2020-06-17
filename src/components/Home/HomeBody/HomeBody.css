@@ -1,0 +1,182 @@
+.home-body-container {
+  background-attachment: fixed;
+  background-color: #f9f9f9;
+  min-height: 100%;
+  height: fit-content;
+  margin-top: 56px;
+}
+.home-body-container .video-intro {
+  height: 100%;
+  width: 100%;
+}
+.home-body-container .candidate-job-search-container {
+  height: 110px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.home-body-container .candidate-job-search-container .candidate-job-search {
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 70%;
+}
+.home-body-container .candidate-job-search-container .candidate-job-search .search-ipt {
+  border: none;
+  border-bottom: 1px solid #c4c4c4;
+  text-indent: 20px;
+  width: 50%;
+  font-size: 18px;
+  font-family: "Open Sans";
+  margin-right: 10px;
+}
+.home-body-container .candidate-job-search-container .candidate-job-search .search-btn {
+  top: 0;
+  border-radius: 20px;
+  border: none;
+  padding: 8px 32px;
+  color: white;
+  font-weight: bold;
+  background-color: #fd7e14;
+}
+.home-body-container .candidate-job-search-container .candidate-job-search .search-btn:hover {
+  background-color: #e67300;
+}
+.home-body-container .candidate-job-seek .candidate-job-seek-header {
+  background-color: #fd7e14;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0px 1px 2px 2px rgba(212, 205, 212, 1);
+}
+.home-body-container .candidate-job-seek .candidate-job-seek-header .candidate-post-icon {
+  margin-right: 10px;
+}
+.home-body-container .candidate-job-seek .candidate-job-seek-header h5 {
+  color: white;
+  margin: 0;
+}
+.home-body-container .candidate-job-seek .candidate-job-seek-body {
+  height: fit-content;
+  position: relative;
+}
+.home-body-container .candidate-job-seek .candidate-job-seek-body .recruit-list {
+  background-color: white;
+  box-shadow: 0px 1px 2px 2px rgba(212, 205, 212, 1);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 100%;
+  padding-bottom: 15px;
+}
+.home-body-container .candidate-job-seek .candidate-job-seek-body .recruit-list .order-display {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+}
+.home-body-container .candidate-job-seek .candidate-job-seek-body .recruit-list .order-display .tab {
+  width: 100%;
+  font-family: sans-serif;
+  color: #444;
+}
+.home-body-container .candidate-job-seek .candidate-job-seek-body .recruit-list .order-display .tab .order-tab-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+  min-height: 100%;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+.home-body-container .candidate-job-seek .candidate-job-seek-body .recruit-list .order-display ul.inline {
+  position: absolute;
+  bottom: -10px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+.home-body-container .candidate-job-seek .candidate-job-seek-body .recruit-list .order-display ul.inline li {
+  display: inline-block;
+  padding: 0px;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  transition: all 0.5s;
+  cursor: pointer;
+  background-color: #c0c0c0;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.home-body-container .candidate-job-seek .candidate-job-seek-body .recruit-list .order-display ul.inline li.selected {
+  background-color: #fd7e14;
+  color: #444;
+}
+.home-body-container .candidate-job-seek .candidate-job-seek-body .recruit-list .order-display ul.inline li:hover {
+  background-color: black;
+}
+.home-body-container .candidate-job-seek .candidate-job-seek-body .recruit-list .order-display .group-tab-btn {
+  position: absolute;
+  top: 45%;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.home-body-container .candidate-job-seek .candidate-job-seek-body .recruit-list .order-display .group-tab-btn .point-btn {
+  top: 0px;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.9;
+  background-color: #dad9da;
+}
+.home-body-container .candidate-job-hire {
+  height: 400px;
+  padding-top: 100px;
+}
+.home-body-container .candidate-job-hire .hire-text {
+  color: black;
+  font-size: 40px;
+  width: 50%;
+}
+.home-body-container .candidate-job-hire .hire-text .trans-text {
+  color: #fd7e14;
+}
+.home-body-container .candidate-job-hire .hire-text .trans-bg-text {
+  font-size: 100px;
+  color: #999;
+  opacity: 0.1;
+  position: relative;
+  top: -25%;
+  left: -20%;
+}
+.home-body-container .candidate-job-hire .hire-steps {
+  color: gray;
+}
+.home-body-container .candidate-job-hire .hire-steps .hire-step {
+  background-color: #fff;
+  height: 320px;
+  width: 260px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+  align-items: center;
+}
+.home-body-container .candidate-job-hire .hire-steps .hire-step .step-img {
+  width: 90px;
+}
+.home-body-container .candidate-job-hire .hire-steps .hire-step p {
+  font-weight: bold;
+}

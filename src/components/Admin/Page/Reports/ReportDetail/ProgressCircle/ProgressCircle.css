@@ -1,0 +1,23 @@
+.progress-circle-container {
+  height: 82px;
+  width: 82px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  position: relative;
+}
+.progress-circle-container .completed-circle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.progress-circle-container .overlay-info {
+  height: 70px;
+  width: 70px;
+  background-color: #f2f2f2;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 3;
+  margin-left: 6px;
+  margin-top: 6px;
+}

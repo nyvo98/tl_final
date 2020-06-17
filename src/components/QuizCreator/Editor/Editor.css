@@ -1,0 +1,739 @@
+.editor {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  background-color: #f2f2f2;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+.editor .question-editor {
+  width: 600px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.editor .question-editor .button-group {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.editor .question-editor .button-group button {
+  height: 40px;
+  min-width: 200px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+.editor .question-editor .button-group .b-create {
+  background-color: #7d72ec;
+  color: white;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 0 #7d72ec, 0 4px 6px rgba(0, 0, 0, 0.45);
+}
+.editor .question-editor .button-group .b-teleport {
+  background-color: white;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 0 #fff, 0 4px 2px rgba(0, 0, 0, 0.45);
+}
+.editor .question-editor .button-group p {
+  position: relative;
+  top: 10px;
+}
+.editor .question-editor .no-question-created {
+  width: 70%;
+  position: relative;
+  margin: 30px auto;
+}
+.editor .quiz-info-container {
+  flex-grow: 0;
+  min-width: 200px;
+  width: 300px;
+  padding: 30px;
+  margin-left: 40px;
+}
+.editor .quiz-info-container .quiz-info-edit-container {
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  position: fixed;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-image-choice-overlay {
+  padding: 0 10px;
+  position: relative;
+  max-height: 120px;
+  width: 100%;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-image-choice-overlay .crop-quiz-img-choice {
+  max-width: auto;
+  max-height: 100%;
+  height: 120px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-image-choice-overlay .crop-quiz-img-choice .quiz-image-choice {
+  max-width: 100%;
+  max-height: 100%;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-image-choice-overlay .overlay-edit {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.2s ease;
+  background-color: black;
+  border-radius: 5px;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-image-choice-overlay .overlay-edit .overlay-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-info-edit-quiz-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 25px;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-info-edit-quiz-name .quiz-name {
+  color: black;
+  font-family: Quicksand, Helvetica, Arial;
+  font-weight: bold;
+  font-size: 24px;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-info-edit-quiz-name button {
+  border: none;
+  background: none;
+  top: 0;
+  outline: none;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-scope-data .scope-public {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-scope-data .scope-public button {
+  border: none;
+  background: none;
+  outline: none;
+  top: 0;
+  color: #fd7e14;
+  font-size: 13px;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-scope-data .scope-public button span {
+  margin-right: 5px;
+}
+.editor .quiz-info-container .quiz-info-edit-container hr {
+  content: "";
+  width: 90%;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-grade {
+  display: flex;
+  flex-direction: row;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-grade .quiz-sm-icon {
+  flex-basis: 20px;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-grade button {
+  border: none;
+  background: none;
+  outline: none;
+  top: 0;
+  color: #6b6c77;
+  width: 90%;
+  height: 24px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-grade button:hover {
+  text-decoration: underline;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-subject {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1px;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-subject .quiz-sm-icon {
+  flex-basis: 20px;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-subject button {
+  border: none;
+  background: none;
+  outline: none;
+  top: 0;
+  color: #6b6c77;
+  width: 90%;
+  height: 24px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-subject button:hover {
+  text-decoration: underline;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-import {
+  display: flex;
+  flex-direction: row;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-import .quiz-sm-icon {
+  flex-basis: 20px;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-import button {
+  border: none;
+  background: none;
+  outline: none;
+  top: 0;
+  color: #6b6c77;
+  width: 90%;
+  height: 24px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-import button:hover {
+  text-decoration: underline;
+}
+.editor .quiz-info-container .quiz-info-edit-container .quiz-image-choice-overlay:hover .overlay-edit {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.popup, .grade-popup-container, .subject-popup-container, .import-popup-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: scroll;
+  overflow-x: hidden;
+  z-index: 3;
+}
+.popup .popup_inner, .grade-popup-container .popup_inner, .subject-popup-container .popup_inner, .import-popup-container .popup_inner {
+  position: relative !important;
+  left: calc((80%-500px) / 2) !important;
+  background: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  margin: 10px 0;
+  min-width: 300px;
+  max-width: 500px;
+  max-height: fit-content;
+  z-index: 3;
+  transform: translate(-50%, 30%) !important;
+  animation: animatebottom 0.5s ease;
+}
+@keyframes animatebottom {
+  from {
+    bottom: -300px;
+    opacity: 0;
+ }
+  to {
+    bottom: 0;
+    opacity: 1;
+ }
+}
+.popup .popup_inner .popup-header p, .grade-popup-container .popup_inner .popup-header p, .subject-popup-container .popup_inner .popup-header p, .import-popup-container .popup_inner .popup-header p {
+  font-size: 20px;
+  vertical-align: middle;
+}
+.popup .popup_inner .popup-header p img, .grade-popup-container .popup_inner .popup-header p img, .subject-popup-container .popup_inner .popup-header p img, .import-popup-container .popup_inner .popup-header p img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+.popup .popup_inner .popup-header button, .grade-popup-container .popup_inner .popup-header button, .subject-popup-container .popup_inner .popup-header button, .import-popup-container .popup_inner .popup-header button {
+  top: 0;
+  height: 40px;
+  min-width: 100px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: none !important;
+  background-color: white;
+}
+.popup .popup_inner .popup-header .choose-question-types, .grade-popup-container .popup_inner .popup-header .choose-question-types, .subject-popup-container .popup_inner .popup-header .choose-question-types, .import-popup-container .popup_inner .popup-header .choose-question-types {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.popup .popup_inner .popup-body input, .grade-popup-container .popup_inner .popup-body input, .subject-popup-container .popup_inner .popup-body input, .import-popup-container .popup_inner .popup-body input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 0 10px;
+  margin-top: 15px;
+}
+.popup .popup_inner .popup-body button, .grade-popup-container .popup_inner .popup-body button, .subject-popup-container .popup_inner .popup-body button, .import-popup-container .popup_inner .popup-body button {
+  height: 40px;
+  min-width: 150px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  top: 0;
+  margin-top: 15px;
+}
+.popup .popup_inner .popup-footer, .grade-popup-container .popup_inner .popup-footer, .subject-popup-container .popup_inner .popup-footer, .import-popup-container .popup_inner .popup-footer {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-end !important;
+}
+.popup .popup_inner .popup-footer .question-time-container, .grade-popup-container .popup_inner .popup-footer .question-time-container, .subject-popup-container .popup_inner .popup-footer .question-time-container, .import-popup-container .popup_inner .popup-footer .question-time-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+.popup .popup_inner .popup-footer .question-time-container span, .grade-popup-container .popup_inner .popup-footer .question-time-container span, .subject-popup-container .popup_inner .popup-footer .question-time-container span, .import-popup-container .popup_inner .popup-footer .question-time-container span {
+  align-self: center;
+  margin-left: 10px;
+}
+.popup .popup_inner .popup-footer .question-time-container .question-time, .grade-popup-container .popup_inner .popup-footer .question-time-container .question-time, .subject-popup-container .popup_inner .popup-footer .question-time-container .question-time, .import-popup-container .popup_inner .popup-footer .question-time-container .question-time {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-left: 5px;
+  border-radius: 3px;
+  border: 1px solid #dbdadb;
+}
+.popup .popup_inner .popup-footer .question-time-container .question-time button, .grade-popup-container .popup_inner .popup-footer .question-time-container .question-time button, .subject-popup-container .popup_inner .popup-footer .question-time-container .question-time button, .import-popup-container .popup_inner .popup-footer .question-time-container .question-time button {
+  border: none;
+}
+.popup .popup_inner .popup-footer button, .grade-popup-container .popup_inner .popup-footer button, .subject-popup-container .popup_inner .popup-footer button, .import-popup-container .popup_inner .popup-footer button {
+  height: 40px;
+  min-width: 100px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: none !important;
+}
+.popup .popup_inner .popup-footer button:hover, .grade-popup-container .popup_inner .popup-footer button:hover, .subject-popup-container .popup_inner .popup-footer button:hover, .import-popup-container .popup_inner .popup-footer button:hover {
+  position: relative;
+  top: 0;
+}
+.popup .popup_inner .popup-footer .b-cancel, .grade-popup-container .popup_inner .popup-footer .b-cancel, .subject-popup-container .popup_inner .popup-footer .b-cancel, .import-popup-container .popup_inner .popup-footer .b-cancel {
+  background-color: white;
+}
+.popup .popup_inner .popup-footer .b-save, .grade-popup-container .popup_inner .popup-footer .b-save, .subject-popup-container .popup_inner .popup-footer .b-save, .import-popup-container .popup_inner .popup-footer .b-save {
+  background-color: #00c985;
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.popup .popup_inner .popup-footer .b-save span, .grade-popup-container .popup_inner .popup-footer .b-save span, .subject-popup-container .popup_inner .popup-footer .b-save span, .import-popup-container .popup_inner .popup-footer .b-save span {
+  margin-left: 10px;
+}
+.grade-popup-container {
+  height: 100%;
+  width: 100%;
+}
+.grade-popup-container .popup .popup_inner, .grade-popup-container .popup_inner, .grade-popup-container .subject-popup-container .popup_inner, .grade-popup-container .import-popup-container .popup_inner {
+  top: 40% !important;
+  left: 50% !important;
+}
+.grade-popup-container .popup .popup_inner .popup-header, .grade-popup-container .popup_inner .popup-header, .grade-popup-container .subject-popup-container .popup_inner .popup-header, .grade-popup-container .import-popup-container .popup_inner .popup-header {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+.grade-popup-container .popup .popup_inner .popup-header p img, .grade-popup-container .popup_inner .popup-header p img, .grade-popup-container .subject-popup-container .popup_inner .popup-header p img, .grade-popup-container .import-popup-container .popup_inner .popup-header p img {
+  height: 64px;
+  width: 64px;
+}
+.grade-popup-container .popup .popup_inner .popup-header hr, .grade-popup-container .popup_inner .popup-header hr, .grade-popup-container .subject-popup-container .popup_inner .popup-header hr, .grade-popup-container .import-popup-container .popup_inner .popup-header hr {
+  content: "";
+  width: 100%;
+}
+.grade-popup-container .popup .popup_inner .popup-body .add-title-image-section .section-name, .grade-popup-container .popup_inner .popup-body .add-title-image-section .section-name, .grade-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .section-name, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .popup_inner .popup-body .select-language-section .section-name, .grade-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .section-name, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .popup_inner .popup-body .select-grade-section .section-name, .grade-popup-container .subject-popup-container .popup_inner .popup-body .add-title-image-section .section-name, .grade-popup-container .subject-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .section-name, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .subject-popup-container .popup_inner .popup-body .select-language-section .section-name, .grade-popup-container .subject-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .section-name, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .subject-popup-container .popup_inner .popup-body .select-grade-section .section-name, .grade-popup-container .import-popup-container .popup_inner .popup-body .add-title-image-section .section-name, .grade-popup-container .import-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .section-name, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .import-popup-container .popup_inner .popup-body .select-language-section .section-name, .grade-popup-container .import-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .section-name, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .import-popup-container .popup_inner .popup-body .select-grade-section .section-name, .grade-popup-container .popup .popup_inner .popup-body .select-language-section .section-name, .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .section-name {
+  color: rgba(41, 42, 58, 0.67);
+  font-size: 14px;
+  padding: 5px 10px;
+  margin-top: 0;
+}
+.grade-popup-container .popup .popup_inner .popup-body .add-title-image-section .title-image-picker, .grade-popup-container .popup_inner .popup-body .add-title-image-section .title-image-picker, .grade-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .popup_inner .popup-body .select-language-section .title-image-picker, .grade-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .popup_inner .popup-body .select-grade-section .title-image-picker, .grade-popup-container .subject-popup-container .popup_inner .popup-body .add-title-image-section .title-image-picker, .grade-popup-container .subject-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .subject-popup-container .popup_inner .popup-body .select-language-section .title-image-picker, .grade-popup-container .subject-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .subject-popup-container .popup_inner .popup-body .select-grade-section .title-image-picker, .grade-popup-container .import-popup-container .popup_inner .popup-body .add-title-image-section .title-image-picker, .grade-popup-container .import-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .import-popup-container .popup_inner .popup-body .select-language-section .title-image-picker, .grade-popup-container .import-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .import-popup-container .popup_inner .popup-body .select-grade-section .title-image-picker, .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker, .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker {
+  height: 110px;
+  border: 2px dashed #dfdfe0;
+  margin: 5px 10px;
+  border-radius: 10px;
+  position: relative;
+  padding: 0 30%;
+}
+.grade-popup-container .popup .popup_inner .popup-body .add-title-image-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .popup_inner .popup-body .add-title-image-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .popup_inner .popup-body .select-language-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .popup_inner .popup-body .select-grade-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .subject-popup-container .popup_inner .popup-body .add-title-image-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .subject-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .subject-popup-container .popup_inner .popup-body .select-language-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .subject-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .subject-popup-container .popup_inner .popup-body .select-grade-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .import-popup-container .popup_inner .popup-body .add-title-image-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .import-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .import-popup-container .popup_inner .popup-body .select-language-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .import-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .import-popup-container .popup_inner .popup-body .select-grade-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker .crop-quiz-title-img, .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker .crop-quiz-title-img {
+  max-width: 100%;
+  max-height: 100%;
+  height: 106px;
+  overflow: hidden;
+  margin-top: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.grade-popup-container .popup .popup_inner .popup-body .add-title-image-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .popup_inner .popup-body .add-title-image-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .popup_inner .popup-body .select-language-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .popup_inner .popup-body .select-grade-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .subject-popup-container .popup_inner .popup-body .add-title-image-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .subject-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .subject-popup-container .popup_inner .popup-body .select-language-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .subject-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .subject-popup-container .popup_inner .popup-body .select-grade-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .import-popup-container .popup_inner .popup-body .add-title-image-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .import-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .import-popup-container .popup_inner .popup-body .select-language-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .import-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .import-popup-container .popup_inner .popup-body .select-grade-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker .crop-quiz-title-img .default-title-image, .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker .crop-quiz-title-img .default-title-image {
+  max-width: calc(100% + 50px);
+  max-height: 100%;
+  margin: 0;
+}
+.grade-popup-container .popup .popup_inner .popup-body .add-title-image-section .title-image-picker .delete-title-image, .grade-popup-container .popup_inner .popup-body .add-title-image-section .title-image-picker .delete-title-image, .grade-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker .delete-title-image, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .popup_inner .popup-body .select-language-section .title-image-picker .delete-title-image, .grade-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker .delete-title-image, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .popup_inner .popup-body .select-grade-section .title-image-picker .delete-title-image, .grade-popup-container .subject-popup-container .popup_inner .popup-body .add-title-image-section .title-image-picker .delete-title-image, .grade-popup-container .subject-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker .delete-title-image, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .subject-popup-container .popup_inner .popup-body .select-language-section .title-image-picker .delete-title-image, .grade-popup-container .subject-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker .delete-title-image, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .subject-popup-container .popup_inner .popup-body .select-grade-section .title-image-picker .delete-title-image, .grade-popup-container .import-popup-container .popup_inner .popup-body .add-title-image-section .title-image-picker .delete-title-image, .grade-popup-container .import-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker .delete-title-image, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .import-popup-container .popup_inner .popup-body .select-language-section .title-image-picker .delete-title-image, .grade-popup-container .import-popup-container .popup_inner .popup-body .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker .delete-title-image, .grade-popup-container .popup .popup_inner .popup-body .grade-popup-container .import-popup-container .popup_inner .popup-body .select-grade-section .title-image-picker .delete-title-image, .grade-popup-container .popup .popup_inner .popup-body .select-language-section .title-image-picker .delete-title-image, .grade-popup-container .popup .popup_inner .popup-body .select-grade-section .title-image-picker .delete-title-image {
+  position: absolute;
+  background-color: red;
+  padding: 10px;
+  margin: 0;
+  border-radius: 5px;
+  right: 5px;
+  top: 5px;
+}
+.grade-popup-container .popup .popup_inner .popup-body .select-grade-section .grade-start-end, .grade-popup-container .popup_inner .popup-body .select-grade-section .grade-start-end, .grade-popup-container .subject-popup-container .popup_inner .popup-body .select-grade-section .grade-start-end, .grade-popup-container .import-popup-container .popup_inner .popup-body .select-grade-section .grade-start-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0;
+  padding: 0 10px;
+}
+.grade-popup-container .popup .popup_inner .popup-body .select-grade-section .grade-start-end button span, .grade-popup-container .popup_inner .popup-body .select-grade-section .grade-start-end button span, .grade-popup-container .subject-popup-container .popup_inner .popup-body .select-grade-section .grade-start-end button span, .grade-popup-container .import-popup-container .popup_inner .popup-body .select-grade-section .grade-start-end button span {
+  margin: 0;
+  margin-right: 5px;
+}
+.grade-popup-container .popup .popup_inner .popup-body .select-grade-section .grade-start-end button i, .grade-popup-container .popup_inner .popup-body .select-grade-section .grade-start-end button i, .grade-popup-container .subject-popup-container .popup_inner .popup-body .select-grade-section .grade-start-end button i, .grade-popup-container .import-popup-container .popup_inner .popup-body .select-grade-section .grade-start-end button i {
+  margin: 0;
+}
+.grade-popup-container .popup .popup_inner .popup-body .select-grade-section .grade-start-end button i svg, .grade-popup-container .popup_inner .popup-body .select-grade-section .grade-start-end button i svg, .grade-popup-container .subject-popup-container .popup_inner .popup-body .select-grade-section .grade-start-end button i svg, .grade-popup-container .import-popup-container .popup_inner .popup-body .select-grade-section .grade-start-end button i svg {
+  margin: 0;
+  margin-top: -3px;
+}
+.grade-popup-container .popup .popup_inner .popup-footer, .grade-popup-container .popup_inner .popup-footer, .grade-popup-container .subject-popup-container .popup_inner .popup-footer, .grade-popup-container .import-popup-container .popup_inner .popup-footer {
+  margin-top: 0;
+}
+.subject-popup-container {
+  height: 100%;
+  width: 100%;
+}
+.subject-popup-container .popup .popup_inner, .subject-popup-container .grade-popup-container .popup_inner, .subject-popup-container .popup_inner, .subject-popup-container .import-popup-container .popup_inner {
+  width: 432px;
+  height: fit-content;
+  background-color: white;
+  z-index: 100;
+  border-radius: 10px;
+  padding: 24px;
+}
+.subject-popup-container .popup .popup_inner .popup-header, .subject-popup-container .grade-popup-container .popup_inner .popup-header, .subject-popup-container .popup_inner .popup-header, .subject-popup-container .import-popup-container .popup_inner .popup-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+}
+.subject-popup-container .popup .popup_inner .popup-header img, .subject-popup-container .grade-popup-container .popup_inner .popup-header img, .subject-popup-container .popup_inner .popup-header img, .subject-popup-container .import-popup-container .popup_inner .popup-header img {
+  height: 50px;
+  width: 50px;
+}
+.subject-popup-container .popup .popup_inner .popup-header p, .subject-popup-container .grade-popup-container .popup_inner .popup-header p, .subject-popup-container .popup_inner .popup-header p, .subject-popup-container .import-popup-container .popup_inner .popup-header p {
+  padding-left: 10px;
+  font-weight: normal;
+  font-size: 20px;
+  color: #666;
+  font-weight: bold;
+}
+.subject-popup-container .popup .popup_inner .popup-header hr, .subject-popup-container .grade-popup-container .popup_inner .popup-header hr, .subject-popup-container .popup_inner .popup-header hr, .subject-popup-container .import-popup-container .popup_inner .popup-header hr {
+  width: 100%;
+  content: "";
+}
+.subject-popup-container .popup .popup_inner .popup-body .init-quiz-name-quiz p, .subject-popup-container .grade-popup-container .popup_inner .popup-body .init-quiz-name-quiz p, .subject-popup-container .popup_inner .popup-body .init-quiz-name-quiz p, .subject-popup-container .import-popup-container .popup_inner .popup-body .init-quiz-name-quiz p {
+  color: #6f94bb;
+}
+.subject-popup-container .popup .popup_inner .popup-body .init-quiz-name-quiz input, .subject-popup-container .grade-popup-container .popup_inner .popup-body .init-quiz-name-quiz input, .subject-popup-container .popup_inner .popup-body .init-quiz-name-quiz input, .subject-popup-container .import-popup-container .popup_inner .popup-body .init-quiz-name-quiz input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-indent: 10px;
+  color: gray;
+}
+.subject-popup-container .popup .popup_inner .popup-body .init-quiz-choose-subject, .subject-popup-container .grade-popup-container .popup_inner .popup-body .init-quiz-choose-subject, .subject-popup-container .popup_inner .popup-body .init-quiz-choose-subject, .subject-popup-container .import-popup-container .popup_inner .popup-body .init-quiz-choose-subject {
+  margin-top: 20px;
+}
+.subject-popup-container .popup .popup_inner .popup-body .init-quiz-choose-subject p, .subject-popup-container .grade-popup-container .popup_inner .popup-body .init-quiz-choose-subject p, .subject-popup-container .popup_inner .popup-body .init-quiz-choose-subject p, .subject-popup-container .import-popup-container .popup_inner .popup-body .init-quiz-choose-subject p {
+  color: #6f94bb;
+}
+.subject-popup-container .popup .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds, .subject-popup-container .grade-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds, .subject-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds, .subject-popup-container .import-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 0px;
+  margin-top: 0;
+}
+.subject-popup-container .popup .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject, .subject-popup-container .grade-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject, .subject-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject, .subject-popup-container .import-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject {
+  height: 28px;
+  width: fit-content;
+  margin-right: 6px;
+  margin-bottom: 10px;
+  padding: 0 12px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+}
+.subject-popup-container .popup .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject button, .subject-popup-container .grade-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject button, .subject-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject button, .subject-popup-container .import-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject button {
+  margin-top: 0;
+  background: none;
+  border: none;
+  height: 24px;
+  width: fit-content;
+  min-width: 80px;
+}
+.subject-popup-container .popup .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject:hover, .subject-popup-container .grade-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject:hover, .subject-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject:hover, .subject-popup-container .import-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject:hover {
+  background-color: #fd7e14;
+}
+.subject-popup-container .popup .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject:hover button, .subject-popup-container .grade-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject:hover button, .subject-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject:hover button, .subject-popup-container .import-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .subject:hover button {
+  color: white;
+}
+.subject-popup-container .popup .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .active-subject, .subject-popup-container .grade-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .active-subject, .subject-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .active-subject, .subject-popup-container .import-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds .active-subject {
+  background: #fd7e14;
+  color: white;
+}
+.subject-popup-container .popup .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds button:hover, .subject-popup-container .grade-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds button:hover, .subject-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds button:hover, .subject-popup-container .import-popup-container .popup_inner .popup-body .init-quiz-choose-subject .subject-clouds button:hover {
+  position: relative;
+  top: 0 !important;
+}
+.subject-popup-container .popup .popup_inner .popup-footer .b-create, .subject-popup-container .grade-popup-container .popup_inner .popup-footer .b-create, .subject-popup-container .popup_inner .popup-footer .b-create, .subject-popup-container .import-popup-container .popup_inner .popup-footer .b-create {
+  height: 40px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #70ad47;
+  color: white;
+  padding: 0 5px;
+}
+.import-popup-container {
+  height: 100%;
+  width: 100%;
+}
+.import-popup-container .popup .popup_inner .popup-body .input-file-container, .import-popup-container .grade-popup-container .popup_inner .popup-body .input-file-container, .import-popup-container .subject-popup-container .popup_inner .popup-body .input-file-container, .import-popup-container .popup_inner .popup-body .input-file-container {
+  border: 2px dashed #ccc !important;
+}
+.quiz-creator-nav {
+  height: 56px;
+  background-color: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: calc((20%-1200px) / 2);
+  padding-left: calc((20%-1200px) / 2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0px 1px 2px 2px rgba(212, 205, 212, 1);
+  z-index: 1;
+}
+.quiz-creator-nav .logo img {
+  height: 110px;
+  position: relative;
+  top: -15px;
+  left: 0;
+}
+.quiz-creator-nav .button-group {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.quiz-creator-nav .button-group button {
+  height: 40px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+}
+.quiz-creator-nav .button-group .b-exit {
+  background-color: white;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.15), 0 4px 0 #fd7e14, 0 4px 2px rgba(0, 0, 0, 0.45);
+  color: #fd7e14;
+  outline: none;
+  font-weight: bold;
+  border: 1px solid #fd7e14;
+}
+.quiz-creator-nav .button-group .b-finish {
+  background-color: #fd7e14;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 0 #fd7e14, 0 4px 2px rgba(0, 0, 0, 0.45);
+  color: white;
+  font-weight: bold;
+  outline: none;
+}
+.teleport-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  overflow-x: hidden;
+  z-index: 3;
+  padding-left: 25%;
+}
+.teleport-container .teleport-inner {
+  position: relative !important;
+  background: white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-top: 10px;
+  margin: 1px 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 99%;
+  height: 99%;
+  z-index: 4;
+  animation: animateright 0.5s ease;
+  overflow: hidden;
+}
+@keyframes animateright {
+  from {
+    right: -1200px;
+    opacity: 0;
+ }
+  to {
+    right: 0;
+    opacity: 1;
+ }
+}
+.teleport-container .teleport-inner .teleport-header {
+  border-bottom: 1px solid #ccc;
+  padding: 0 10px;
+  padding-bottom: 10px;
+}
+.teleport-container .teleport-inner .teleport-header .default-by-name-input {
+  height: 48px;
+  padding: 0 16px;
+  font-size: 24px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid #cfcfcf;
+  flex-grow: 1;
+}
+.teleport-container .teleport-inner .teleport-header .close-teleport-btn {
+  top: 0;
+  background: transparent;
+  border: none;
+  padding: 0 9px;
+}
+.teleport-container .teleport-inner .teleport-header .close-teleport-btn:hover {
+  background-color: #f6f4f5;
+  border-radius: 50%;
+  padding: 0px 9px;
+}
+.teleport-container .teleport-inner .teleport-body {
+  height: 100%;
+  padding-bottom: 70px;
+}
+.teleport-container .teleport-inner .teleport-body .teleport-quiz-list {
+  flex-basis: 35%;
+  width: 35%;
+  height: 100%;
+  overflow-y: auto;
+}
+.teleport-container .teleport-inner .teleport-body .teleport-quiz-list .teleport-quiz-overview {
+  border: 1px solid #ededed;
+  height: 100px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+.teleport-container .teleport-inner .teleport-body .teleport-quiz-list .teleport-quiz-overview img {
+  height: 44px;
+  width: 44px;
+}
+.teleport-container .teleport-inner .teleport-body .teleport-quiz-list .teleport-quiz-overview:focus {
+  background-color: #f2f2f2;
+  outline: none;
+}
+.teleport-container .teleport-inner .teleport-body .teleport-quiz-list .teleport-quiz-overview .for-focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+.teleport-container .teleport-inner .teleport-body .teleport-quiz-list .teleport-quiz-overview .for-focus:hover {
+  cursor: pointer;
+}
+.teleport-container .teleport-inner .teleport-body .teleport-question-of-quiz {
+  height: 100%;
+  overflow-y: auto;
+  max-width: 63%;
+}
+.teleport-container .teleport-inner .teleport-body .teleport-question-of-quiz .teleport-single-question {
+  min-height: 160px;
+  max-height: fit-content;
+  border: 1px solid #ededed;
+}
+.teleport-container .teleport-inner .teleport-body .teleport-question-of-quiz .teleport-single-question .cho-content {
+  margin-left: 10px;
+  margin-bottom: 16px;
+  width: fit-content;
+  min-width: 45%;
+  max-width: 100%;
+}
+.teleport-container .teleport-inner .teleport-body .teleport-question-of-quiz .teleport-single-question .cho-content span {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  width: 100%;
+}
+.teleport-container .teleport-inner .teleport-body .teleport-question-of-quiz .teleport-single-question .cho-content span span {
+  margin-left: 10px;
+  color: #725068;
+  font-size: 14px;
+  max-width: 700px;
+  word-break: break-all;
+  height: auto;
+}
+.teleport-container .teleport-inner .teleport-body .teleport-question-of-quiz .teleport-single-question .teleport-add-btn {
+  top: 0;
+  opacity: 0;
+  height: 40px;
+  width: 80px;
+  top: -3px;
+  right: 0px;
+}
+.teleport-container .teleport-inner .teleport-body .teleport-question-of-quiz .teleport-single-question:hover .teleport-add-btn {
+  opacity: 0.8;
+}
+@media only screen and (max-width: 1200px) {
+  .quiz-creator-nav {
+    padding: 0;
+ }
+  .quiz-creator-nav .logo img {
+    left: -25px;
+ }
+}

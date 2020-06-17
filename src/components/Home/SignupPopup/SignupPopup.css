@@ -1,0 +1,169 @@
+.signup-pop-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: scroll;
+    overflow: hidden;
+}
+.signup-pop-container .signup-pop-inner-container {
+    height: 100%;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner-crop {
+    width: 90%;
+    overflow-y: hidden;
+    align-self: center;
+    transition: height 0.3s ease;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner-crop .signup-pop-inner-img {
+    width: 100%;
+    align-self: center;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner {
+    background-color: #fff;
+    border-radius: 10px;
+    height: fit-content;
+    transition: height 0.3 ease;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-header {
+    position: relative;
+    padding: 20px 25px 0 25px;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-header .signup-header-text * {
+    font-size: 26px;
+    font-family: QuickSand;
+    font-weight: 900;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-header .signup-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 0;
+    background-color: transparent;
+    padding: 0.1em 0.5em;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-header .signup-close-btn:hover {
+    background-color: #bfbfbf;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-header .some-dash {
+    background-color: #fdc029;
+    height: 5px;
+    margin: 0 45% 1rem 45%;
+    border-radius: 2px;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body p, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer p {
+    font-family: QuickSand;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .custom-signup-btn, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .custom-signup-btn {
+    background-color: #4285f4 !important;
+    color: white !important;
+    top: 0;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .divide-or, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .divide-or {
+    font-size: 14px;
+    font-weight: 400;
+    color: gray;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-email p, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email p {
+    font-family: QuickSand;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-email .signup-email-input-group, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-email-input-group, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-group, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-group, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-email .signup-via-email-group .signup-group, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-email .signup-group {
+    position: relative;
+    margin-bottom: 5px;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-email .signup-email-input-group span, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-email-input-group span, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-group span, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-group span, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-email .signup-via-email-group .signup-group span, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-email .signup-group span, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-email .signup-email-input-group .signup-email-icon, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-email-input-group .signup-email-icon, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-group .signup-email-icon, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-group .signup-email-icon, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-email .signup-via-email-group .signup-group .signup-email-icon, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-email .signup-group .signup-email-icon {
+    position: absolute;
+    left: 26%;
+    top: 25%;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-email .signup-email-input-group input, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-email-input-group input, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-group input, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-group input, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-email .signup-via-email-group .signup-group input, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-email .signup-group input, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-email .signup-email-input-group .signup-email-ipt, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-email-input-group .signup-email-ipt, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-group .signup-email-ipt, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-email .signup-group .signup-email-ipt, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-email .signup-via-email-group .signup-group .signup-email-ipt, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-email .signup-group .signup-email-ipt {
+    border: 1px solid #b3b3b3;
+    text-indent: 1.5rem;
+    font-family: QuickSand;
+    width: 50%;
+    border-radius: 3px;
+    padding: 0.5rem 0.1rem;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-via-email-group {
+    animation: slideDown 0.5s ease;
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+   }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+   }
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-ant-group, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-via-email-group .signup-ant-group {
+    position: relative;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-ant-group .ant-select-selection, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-via-email-group .signup-ant-group .ant-select-selection {
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    padding: 0.4rem 0.1rem;
+    padding-left: 20px !important;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-ant-group *, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-via-email-group .signup-ant-group * {
+    height: 100%;
+    font-family: QuickSand;
+    color: gray;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-ant-group input, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-via-email-group .signup-ant-group input {
+    padding: 0;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-ant-group .ant-select-selection__rendered, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-via-email-group .signup-ant-group .ant-select-selection__rendered {
+    height: 100%;
+    font-size: 20px;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-ant-group .ant-select-selection__rendered .ant-select-selection__placeholder, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-via-email-group .signup-ant-group .ant-select-selection__rendered .ant-select-selection__placeholder {
+    margin-left: 2px !important;
+    font-size: 16px;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-ant-group li.ant-select-selection__choice, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-via-email-group .signup-ant-group li.ant-select-selection__choice {
+    font-size: 16px;
+    padding-top: 4px;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-ant-group span.ant-select-selection__choice__remove, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-via-email-group .signup-ant-group span.ant-select-selection__choice__remove {
+    padding-bottom: 0px;
+    padding-left: 20px;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-ant-group span, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-via-email-group .signup-ant-group span, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-ant-group .signup-email-icon, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-via-email-group .signup-ant-group .signup-email-icon {
+    position: absolute;
+    left: 26%;
+    top: 0;
+    z-index: 10;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-body .signup-via-email-group .signup-btn button, .signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .signup-via-email-group .signup-btn button {
+    background-color: #00c985;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 0 #00c985, 0 4px 6px rgba(0, 0, 0, 0.45);
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer {
+    padding: 1rem 1rem;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .login-btn {
+    top: 0;
+    background-color: #d9d9d9;
+    color: #f17e14;
+    font-family: QuickSand;
+    border: none;
+    padding: 0px 5px;
+    border-radius: 4px;
+}
+.signup-pop-container .signup-pop-inner-container .signup-pop-inner .signup-footer .login-btn:hover {
+    background-color: #bfbfbf;
+}

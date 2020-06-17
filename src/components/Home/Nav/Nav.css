@@ -1,0 +1,83 @@
+.home-nav-container {
+  height: 56px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  position: fixed;
+  z-index: 10;
+  border-bottom: 2px solid #c4c4c4;
+}
+.home-nav-container .logo .big-logo {
+  height: 56px;
+  position: relative;
+  top: 3px;
+}
+.home-nav-container .button-group {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.home-nav-container .button-group button {
+  height: 40px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+}
+.home-nav-container .button-group .b-log-in {
+  background-color: #595959;
+  color: white;
+  top: 0 !important;
+}
+.home-nav-container .button-group .b-sign-up {
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+  background-color: #00c985;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 0 #00c985, 0 4px 6px rgba(0, 0, 0, 0.45);
+}
+.home-nav-container .button-group button:hover {
+  position: relative;
+  box-shadow: none !important;
+  top: 3px;
+}
+.home-nav-container .button-group .login-user {
+  font-weight: 550;
+  padding: 2px 0px;
+  padding-right: 10px;
+  height: fit-content;
+}
+.home-nav-container .button-group .login-user .user-ava img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.home-nav-container .button-group .login-user:hover {
+  background-color: #ddd;
+  border-radius: 22px;
+}
+.home-nav-container .button-group .ant-btn.ant-dropdown-trigger {
+  border-radius: 50%;
+  padding: 5px;
+  color: gray;
+  height: fit-content;
+  margin: 0px;
+  background-color: transparent;
+  font-weight: 900;
+  outline: none;
+}
+.home-nav-container .button-group .ant-btn.ant-dropdown-trigger:hover {
+  color: #fd7e14;
+}
+.home-nav-container .button-group [ant-click-animating-without-extra-node]:after {
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+}
+.home-nav-container .button-group .ant-btn.ant-dropdown-trigger.ant-dropdown-open {
+  color: #fd7e14;
+}

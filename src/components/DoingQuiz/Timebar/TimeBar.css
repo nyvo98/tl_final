@@ -1,0 +1,113 @@
+@keyframes loader {
+    100% {
+        width: 0%;
+   }
+    95% {
+        width: 5%;
+        background-color: #f00;
+   }
+    90% {
+        width: 10%;
+        background-color: #f00;
+   }
+    85% {
+        width: 15%;
+        background-color: #f60;
+   }
+    80% {
+        width: 20%;
+        background-color: #f60;
+   }
+    75% {
+        width: 25%;
+        background-color: #f60;
+   }
+    70% {
+        width: 30%;
+        background-color: #f60;
+   }
+    65% {
+        width: 35%;
+        background-color: #f60;
+   }
+    60% {
+        width: 40%;
+        background-color: #ff8c1a;
+   }
+    55% {
+        width: 45%;
+        background-color: #ff8c1a;
+   }
+    50% {
+        width: 50%;
+        background-color: #ff8c1a;
+   }
+    45% {
+        width: 55%;
+        background-color: #ff8c1a;
+   }
+    40% {
+        width: 60%;
+        background-color: #9f3;
+   }
+    35% {
+        width: 65%;
+        background-color: #9f3;
+   }
+    30% {
+        width: 70%;
+        background-color: #9f3;
+   }
+    25% {
+        width: 75%;
+        background-color: #9f3;
+   }
+    20% {
+        width: 80%;
+        background-color: #9f3;
+   }
+    15% {
+        width: 85%;
+        background-color: #0f0;
+   }
+    10% {
+        width: 90%;
+        background-color: #0f0;
+   }
+    5% {
+        width: 95%;
+        background-color: #0f0;
+   }
+    0% {
+        width: 100%;
+        background-color: #0f0;
+   }
+}
+.htprogress-bar {
+    border-radius: 60px;
+    overflow: hidden;
+    width: 100%;
+}
+.htprogress-bar span {
+    display: block;
+}
+.htbar {
+    background: rgba(0, 0, 0, 0.075);
+    height: 7px;
+}
+.htprogress {
+    color: #fff;
+    padding: 5px;
+    width: 0;
+}
+.htprogress-bar {
+    left: 0%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, -50%);
+}
+.time-bar-container {
+    position: relative;
+    height: 15px;
+}

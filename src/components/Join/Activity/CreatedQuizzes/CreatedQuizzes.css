@@ -1,0 +1,13 @@
+.quiz-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    padding: 20px 5%;
+    min-height: 100%;
+}
+@media only screen and (max-width: 500px) {
+    .quiz-list {
+        margin-left: 0;
+   }
+}

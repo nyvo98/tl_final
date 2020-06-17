@@ -1,0 +1,95 @@
+.report-detail-container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #f2f2f2;
+  padding: 15px;
+  margin: 15px;
+  margin-right: 25px;
+}
+.report-detail-container .report-detail-overview {
+  width: 100%;
+  border-top: 6px solid #fd7e14;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 15px;
+  background-color: white;
+}
+.report-detail-container .report-detail-overview .rd-text-info * {
+  font-family: "Open Sans";
+  margin-bottom: 10px;
+}
+.report-detail-container .report-detail-overview .rd-text-info .rd-quiz-name {
+  font-size: 24px;
+  font-weight: 600;
+}
+.report-detail-container .report-detail-overview .rd-text-info .rd-viewquiz {
+  width: 100px;
+  top: 0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+.report-detail-container .report-detail-overview .rd-text-info .rd-viewquiz:hover {
+  background-color: #f2f2f2;
+}
+.report-detail-container .report-detail-overview .rd-text-info .rd-quiz-time {
+  color: #737373;
+}
+.report-detail-container .report-detail-overview .chart-info p {
+  color: #b3b3b3;
+  font-family: "Open Sans";
+}
+.report-detail-container .report-detail-overview .chart-info .chart-display .circle {
+  height: 82px;
+  width: 82px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+.report-detail-container .report-detail-tabs .order-display .tab {
+  width: 100%;
+  font-family: sans-serif;
+  color: #444;
+}
+.report-detail-container .report-detail-tabs .order-display ul.inline {
+  background-color: #f2f2f2;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.report-detail-container .report-detail-tabs .order-display ul.inline li {
+  display: inline-block;
+  margin-left: 0;
+  width: 20%;
+  padding: 10px;
+  border-bottom: 2px solid #eee;
+  transition: all 0.5s;
+  font-family: "Open Sans";
+  text-align: center;
+  cursor: pointer;
+  color: #5f666f;
+}
+.report-detail-container .report-detail-tabs .order-display ul.inline li.selected {
+  border-bottom: 2px solid #337ab7;
+  color: #337ab7;
+  font-weight: bold;
+}
+.report-detail-container .report-detail-tabs .order-display ul.inline li:hover {
+  background-color: #f2f2f2;
+}
+@media screen and (max-width: 590px) {
+  .report-detail-container .report-detail-tabs .order-display ul.inline li {
+    padding: 10px 0;
+ }
+}
+.report-detail-container .report-detail-tabs .order-display .point-btn {
+  display: none;
+  height: 0;
+  width: 0;
+}

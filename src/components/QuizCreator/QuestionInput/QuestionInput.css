@@ -1,0 +1,32 @@
+.question-input {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+.question-input .input-group {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.question-input .input-group input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 35px;
+    padding: 0 10px;
+}
+.question-input .input-group span {
+    position: absolute;
+    color: #ccc;
+    margin: 0;
+    right: 0px;
+    top: 10px;
+}
+.question-input * {
+    margin: 0 5px !important;
+}

@@ -1,0 +1,151 @@
+.join-nav-container {
+    height: 58px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #fff;
+    align-items: center;
+    box-shadow: 0px 3px 5px 0px rgba(214, 203, 214, 1);
+    z-index: 10;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+}
+.join-nav-container .logo img {
+    height: 56px;
+    position: relative;
+    top: 3px;
+}
+.join-nav-container .input-field {
+    height: 35px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: 0%;
+}
+.join-nav-container .input-field input {
+    position: relative;
+    min-width: 100px;
+    border: 1px solid #ebebec;
+    display: flex;
+    border-radius: 25px;
+    font-size: 16px;
+    text-indent: 15px;
+    color: gray;
+    height: 35px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.join-nav-container .input-field .search-icon {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 25px;
+}
+@media screen and (max-width: 930px) {
+    .join-nav-container .input-field {
+        width: 0;
+        height: 0;
+   }
+    .join-nav-container .input-field input {
+        min-width: 0;
+        border: none;
+   }
+    .join-nav-container .input-field .search-icon {
+        display: none;
+   }
+}
+.join-nav-container .tab-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+.join-nav-container .tab-field .tab-link {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+.join-nav-container .tab-field .tab-link a {
+    color: #8f9098;
+    font-weight: bold;
+    height: 60px;
+    padding-right: 20px;
+    padding-left: 10px;
+    padding-top: 16%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 18px;
+}
+.join-nav-container .tab-field .tab-link a span {
+    padding: 0 5px;
+}
+.join-nav-container .tab-field .tab-link .active-link {
+    color: #fd7e14;
+    border-bottom: 4px solid #fd7e14;
+    font-size: 18px;
+}
+@media screen and (max-width: 742px) {
+    .join-nav-container .tab-field .tab-name {
+        display: none;
+   }
+}
+.join-nav-container .tab-field .activity-link {
+    height: 60px;
+    margin: 0 10px;
+}
+.join-nav-container .tab-field .activity-link .active-link {
+    color: red;
+}
+@media screen and (max-width: 742px) {
+    .join-nav-container .tab-field {
+        justify-content: center;
+   }
+    .join-nav-container .tab-field a {
+        padding-top: 20px !important;
+        padding-right: 10px !important;
+   }
+}
+.join-nav-container .button-group {
+    padding: 8px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.join-nav-container .button-group button {
+    height: 40px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+}
+.join-nav-container .button-group .b-sign-up {
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    background-color: #fd7e14;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 0 #fd7e14, 0 4px 6px rgba(0, 0, 0, 0.45);
+}
+.join-nav-container .button-group button:hover {
+    position: relative;
+    box-shadow: none !important;
+    top: 3px;
+}
+.join-nav-container .button-group .ant-btn.ant-dropdown-trigger {
+    margin: 0 5px;
+    border-radius: 50%;
+    padding: 5px 10px;
+    padding-bottom: 7px;
+    border: 1px solid #fd7e14;
+    color: #fd7e14;
+    height: fit-content;
+    align-self: center;
+}
+.join-nav-container .button-group .ant-btn.ant-dropdown-trigger:hover {
+    color: #fd7e14;
+}
+.join-nav-container .button-group .ant-btn.ant-dropdown-trigger.ant-dropdown-open {
+    color: #fd7e14;
+}

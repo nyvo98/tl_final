@@ -1,0 +1,9 @@
+.ad-find-container {
+    min-height: 100%;
+    width: 100%;
+    padding-top: 30px;
+}
+.ad-find-container h1 {
+    text-align: center;
+    font-family: "PT Sans Caption";
+}

@@ -1,0 +1,22 @@
+html, body, #root {
+    min-height: 100vh;
+    height: fit-content;
+}
+.page-container {
+    min-height: 100%;
+}
+body {
+    margin: 0 !important;
+}
+p {
+    margin: 0 !important;
+}
+* {
+    font-family: OpenSans, sans-serif, Helvetica, Arial;
+}
+button {
+    outline: none !important;
+}
+input {
+    outline: none !important;
+}

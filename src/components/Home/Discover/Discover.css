@@ -1,0 +1,82 @@
+.discover-page-container {
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+.discover-page-container .discover-main {
+    padding-top: 70px;
+    width: 96%;
+    max-width: 1300px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.discover-page-container .discover-main .candidate-job-search-container {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 1rem 1em;
+}
+.discover-page-container .discover-main .candidate-job-search-container .candidate-job-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.discover-page-container .discover-main .candidate-job-search-container .candidate-job-search .search-ipt {
+    border: none;
+    border-bottom: 1px solid #beabab;
+    text-indent: 20px;
+    width: 30%;
+    font-size: 18px;
+    font-family: "Open Sans";
+    margin-right: 10px;
+}
+.discover-page-container .discover-main .candidate-job-search-container .candidate-job-search .control-select-and-icon {
+    position: relative;
+    width: 23%;
+}
+.discover-page-container .discover-main .candidate-job-search-container .candidate-job-search .control-select-and-icon .insert-icon {
+    position: absolute;
+    top: 16%;
+    left: 2%;
+    z-index: 2;
+}
+.discover-page-container .discover-main .candidate-job-search-container .candidate-job-search .control-select-and-icon .ant-select-selection__rendered {
+    text-indent: 4%;
+    height: 100%;
+}
+.discover-page-container .discover-main .candidate-job-search-container .candidate-job-search .control-select-and-icon .ant-select.ant-select-enabled {
+    height: 100%;
+}
+.discover-page-container .discover-main .candidate-job-search-container .candidate-job-search .control-select-and-icon .ant-select.ant-select-enabled .ant-select-selection {
+    height: 100%;
+}
+.discover-page-container .discover-main .candidate-job-search-container .candidate-job-search .search-btn {
+    top: 0;
+    border-radius: 20px;
+    border: none;
+    padding: 8px 32px;
+    color: white;
+    font-weight: bold;
+    background-color: #fd7e14;
+}
+.discover-page-container .discover-main .candidate-job-search-container .candidate-job-search .search-btn:hover {
+    background-color: #e67300;
+}
+.discover-page-container .discover-main .search-result-header {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1.5rem;
+}
+.discover-page-container .discover-main .search-result-header * {
+    font-family: QuickSand;
+    color: #a6a6a6;
+}
+.discover-page-container .discover-main .search-result-header * strong {
+    color: black;
+}
+.discover-page-container .discover-main .search-result-list {
+    height: fit-content;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    min-width: 480px;
+    flex-grow: 1;
+}

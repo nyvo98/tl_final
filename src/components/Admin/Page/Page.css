@@ -1,0 +1,104 @@
+.admin-page-container {
+    height: fit-content;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #f2f2f2;
+    margin-top: 56px;
+}
+.admin-page-container .admin-control-container {
+    width: 200px;
+    min-width: 180px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+.admin-page-container .admin-control-container .admin-active-tab span {
+    color: #fd7e14;
+}
+.admin-page-container .admin-control-container .admin-active-tab span a {
+    font-weight: bold;
+}
+.admin-page-container .admin-control-container .admin-name-and-ava {
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+}
+.admin-page-container .admin-control-container .admin-name-and-ava .admin-ava img {
+    height: 44px;
+    width: 44px;
+    margin: 0px 8px;
+    border-radius: 50%;
+}
+.admin-page-container .admin-control-container .admin-name-and-ava .admin-name .admin-profile {
+    border: none;
+    background: none;
+    outline: none;
+    top: 0;
+    color: blue;
+    width: 90%;
+    height: 24px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    text-decoration: underline;
+    padding: 0;
+    margin-top: 0;
+}
+.admin-page-container .admin-control-container .admin-create-new-quiz {
+    margin-top: 15px;
+}
+.admin-page-container .admin-control-container .admin-create-new-quiz button {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background: none;
+    outline: none;
+    top: 0;
+    color: #6b6c77;
+    width: 90%;
+    height: 24px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    margin-left: 8px;
+    text-align: center;
+    height: 30px;
+    background: white;
+}
+.admin-page-container .admin-control-container .admin-create-new-quiz button span {
+    margin-right: 8px;
+}
+.admin-page-container .admin-control-container .admin-find-quiz, .admin-page-container .admin-control-container .admin-my-quizzes, .admin-page-container .admin-control-container .admin-reports, .admin-page-container .admin-control-container .admin-collections, .admin-page-container .admin-control-container .admin-profile, .admin-page-container .admin-control-container .admin-settings, .admin-page-container .admin-control-container .admin-log-out {
+    margin-top: 15px;
+}
+.admin-page-container .admin-control-container .admin-find-quiz .btn-admin-find-quiz, .admin-page-container .admin-control-container .admin-my-quizzes .btn-admin-find-quiz, .admin-page-container .admin-control-container .admin-reports .btn-admin-find-quiz, .admin-page-container .admin-control-container .admin-collections .btn-admin-find-quiz, .admin-page-container .admin-control-container .admin-profile .btn-admin-find-quiz, .admin-page-container .admin-control-container .admin-settings .btn-admin-find-quiz, .admin-page-container .admin-control-container .admin-log-out .btn-admin-find-quiz {
+    border: none;
+    background: none;
+    outline: none;
+    top: 0;
+    color: #6b6c77;
+    width: 90%;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    text-align: left;
+    padding: 8px 0 8px 18px;
+}
+.admin-page-container .admin-control-container .admin-find-quiz .btn-admin-find-quiz span, .admin-page-container .admin-control-container .admin-my-quizzes .btn-admin-find-quiz span, .admin-page-container .admin-control-container .admin-reports .btn-admin-find-quiz span, .admin-page-container .admin-control-container .admin-collections .btn-admin-find-quiz span, .admin-page-container .admin-control-container .admin-profile .btn-admin-find-quiz span, .admin-page-container .admin-control-container .admin-settings .btn-admin-find-quiz span, .admin-page-container .admin-control-container .admin-log-out .btn-admin-find-quiz span {
+    margin-right: 10px;
+}
+.admin-page-container .admin-tab-select-container {
+    height: fit-content;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
